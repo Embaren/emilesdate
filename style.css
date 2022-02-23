@@ -1,0 +1,62 @@
+/* CSS styles */
+
+html, body{
+  font-family: Courier new;
+  background-color:lightgray;
+  margin:0;
+  padding:0;
+  display:flex;
+  justify-content:center;
+}
+
+#page{
+  background-color: white;
+  width: 900px;
+  padding:50px;
+  padding-top:0;
+  padding-bottom:0;
+}
+
+header{
+  background-color: white;
+  position:fixed;
+  top:0px;
+  height:90px;
+  padding-top:-90px;
+  width:inherit;
+  
+}
+#content{
+  background-color: white;
+  padding-left:50px;
+  margin-right:-50px;
+  padding-right:50px;
+  margin-left:-50px;
+  padding-top: 90px;
+  padding-bottom: 90px;
+}
+footer{
+  background-color: white;
+  position:fixed;
+  bottom:0px;
+  height:90px;
+  padding-bottom:-90px;
+  width:inherit;
+}
+
+#article{
+  text-align: justify;
+}
+#article-date{
+  color:gray;
+  font-style:italic;
+}
+#article-title{
+  text-align: center;
+}
+
+#mentions-legales{
+  color:gray;
+  line-height:0.5;
+  font-style:italic;
+}
