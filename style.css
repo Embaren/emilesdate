@@ -44,15 +44,15 @@ footer{
   width:inherit;
 }
 
-.article{
-  text-align: justify;
-}
 .article-date{
   color:gray;
   font-style:italic;
 }
 .article-title{
   text-align: center;
+}
+.article-content{
+  text-align: justify;
 }
 
 #mentions-legales{
