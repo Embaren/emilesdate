@@ -44,14 +44,14 @@ footer{
   width:inherit;
 }
 
-#article{
+.article{
   text-align: justify;
 }
-#article-date{
+.article-date{
   color:gray;
   font-style:italic;
 }
-#article-title{
+.article-title{
   text-align: center;
 }
 
