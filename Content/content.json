@@ -1,6 +1,11 @@
 [
     {
         "contentType": "article",
+        "title": "Pizz'ah ben non",
+        "id": "pizzah_ben_non"
+    },
+    {
+        "contentType": "article",
         "title": "Doct'auras pas",
         "id": "doctauras_pas"
     },
