@@ -15,14 +15,14 @@ function getContent(i_path, container){
     readTextFile(contentPath, function(text){
         contentList = JSON.parse(text);
         for (content in contentList){
-            if (contentType in content) switch (content.contentType){
+            if ("contentType" in content) switch (content.contentType){
                 case 'article':
-                    if (id in content){
+                    if ("id" in content){
                         let id=content.id;
                         newArticle = document.createElement("div");
                         newArticle.className = "article";
                         newArticle.id=content.id;
-                        if(title in content){
+                        if("title" in content){
                             titleElement = document.createElement("h2");
                             titleElement.className = "article-title";
                             newArticle.appendChild(titleElement);
@@ -35,17 +35,17 @@ function getContent(i_path, container){
                     }
                     break;
                 case 'chapter':
-                    if (id in content){
+                    if ("id" in content){
                         let id=content.id;
                         newChapter = document.createElement("div");
                         newChapter.className = "article-chapter";
                         newChapter.id=content.id;
-                        if(date in content){
+                        if("date" in content){
                             let dateElement = document.createElement("p");
                             dateElement.className = "article-date";
                             newChapter.appendChild(dateElement);
                         }
-                        if(title in content){
+                        if("title" in content){
                             let dateElement = document.createElement("h3");
                             titleElement.className = "article-chapter-title";
                             newChapter.appendChild(titleElement);
