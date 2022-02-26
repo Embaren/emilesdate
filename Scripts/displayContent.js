@@ -26,6 +26,7 @@ function getContent(i_path, container){
                         if("title" in content){
                             titleElement = document.createElement("h2");
                             titleElement.className = "article-title";
+                            titleElement.innerHTML = content.title;
                             newArticle.appendChild(titleElement);
                         }
                         let newArticleContent = document.createElement("div");
@@ -33,6 +34,8 @@ function getContent(i_path, container){
                         getContent(i_path+"/"+id,newArticleContent);
                         newArticle.appendChild(newArticleContent);
                         container.appendChild(newArticle);
+                        let newhr = document.createElement("hr");
+                        container.appendChild(newhr);
                     }
                     break;
                 case 'chapter':
@@ -44,11 +47,13 @@ function getContent(i_path, container){
                         if("date" in content){
                             let dateElement = document.createElement("p");
                             dateElement.className = "article-date";
+                            dateElement.innerHTML = content.date;
                             newChapter.appendChild(dateElement);
                         }
                         if("title" in content){
                             let dateElement = document.createElement("h3");
                             titleElement.className = "article-chapter-title";
+                            titleElement.innerHTML = content.title;
                             newChapter.appendChild(titleElement);
                         }
                         let chapterPath = i_path+"/"+id+".txt";
