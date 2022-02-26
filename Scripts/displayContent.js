@@ -53,7 +53,7 @@ function getContent(i_path, container){
                         let chapterPath = i_path+"/"+id+".txt";
                         readTextFile(chapterPath, function(chapterText){
                             paragraphs = chapterText.split('\n');
-                            for paragraph in paragraphs{
+                            for (paragraph in paragraphs){
                                 let pElement = document.createElement("p");
                                 pElement.innerHTML = paragraph;
                                 newChapter.appendChild(pElement);
