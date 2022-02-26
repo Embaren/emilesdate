@@ -14,7 +14,8 @@ function getContent(i_path, container){
     contentPath = i_path+"/content.json";
     readTextFile(contentPath, function(text){
         contentList = JSON.parse(text);
-        for (content in contentList){
+        for (i in contentList){
+            content = contentList[i];
             if ("contentType" in content) switch (content.contentType){
                 case 'article':
                     if ("id" in content){
@@ -53,7 +54,8 @@ function getContent(i_path, container){
                         let chapterPath = i_path+"/"+id+".txt";
                         readTextFile(chapterPath, function(chapterText){
                             paragraphs = chapterText.split('\n');
-                            for (paragraph in paragraphs){
+                            for (j in paragraphs){
+                                paragraph = paragraphs[j];
                                 let pElement = document.createElement("p");
                                 pElement.innerHTML = paragraph;
                                 newChapter.appendChild(pElement);
