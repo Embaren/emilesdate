@@ -24,7 +24,7 @@ function getContent(i_path, container){
                         newArticle.className = "article";
                         newArticle.id=content.id;
                         if("title" in content){
-                            titleElement = document.createElement("h2");
+                            let titleElement = document.createElement("h2");
                             titleElement.className = "article-title";
                             titleElement.innerHTML = content.title;
                             newArticle.appendChild(titleElement);
@@ -51,14 +51,14 @@ function getContent(i_path, container){
                             newChapter.appendChild(dateElement);
                         }
                         if("title" in content){
-                            let dateElement = document.createElement("h3");
+                            let titleElement = document.createElement("h3");
                             titleElement.className = "article-chapter-title";
                             titleElement.innerHTML = content.title;
                             newChapter.appendChild(titleElement);
                         }
                         let chapterPath = i_path+"/"+id+".txt";
                         readTextFile(chapterPath, function(chapterText){
-                            paragraphs = chapterText.split('\n');
+                            let paragraphs = chapterText.split('\n');
                             for (j in paragraphs){
                                 let paragraph = paragraphs[j];
                                 let pElement = document.createElement("p");
