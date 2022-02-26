@@ -11,16 +11,16 @@ function readTextFile(file, callback) {
 }
 
 function getContent(i_path, container){
-    contentPath = i_path+"/content.json";
+    let contentPath = i_path+"/content.json";
     readTextFile(contentPath, function(text){
-        contentList = JSON.parse(text);
+        let contentList = JSON.parse(text);
         for (i in contentList){
-            content = contentList[i];
+            let content = contentList[i];
             if ("contentType" in content) switch (content.contentType){
                 case 'article':
                     if ("id" in content){
                         let id=content.id;
-                        newArticle = document.createElement("div");
+                        let newArticle = document.createElement("div");
                         newArticle.className = "article";
                         newArticle.id=content.id;
                         if("title" in content){
@@ -28,8 +28,8 @@ function getContent(i_path, container){
                             titleElement.className = "article-title";
                             newArticle.appendChild(titleElement);
                         }
-                        newArticleContent = document.createElement("div");
-                        newArticle.className = "article-content";
+                        let newArticleContent = document.createElement("div");
+                        newArticleContent.className = "article-content";
                         getContent(i_path+"/"+id,newArticleContent);
                         newArticle.appendChild(newArticleContent);
                         container.appendChild(newArticle);
@@ -38,7 +38,7 @@ function getContent(i_path, container){
                 case 'chapter':
                     if ("id" in content){
                         let id=content.id;
-                        newChapter = document.createElement("div");
+                        let newChapter = document.createElement("div");
                         newChapter.className = "article-chapter";
                         newChapter.id=content.id;
                         if("date" in content){
@@ -55,7 +55,7 @@ function getContent(i_path, container){
                         readTextFile(chapterPath, function(chapterText){
                             paragraphs = chapterText.split('\n');
                             for (j in paragraphs){
-                                paragraph = paragraphs[j];
+                                let paragraph = paragraphs[j];
                                 let pElement = document.createElement("p");
                                 pElement.innerHTML = paragraph;
                                 newChapter.appendChild(pElement);
