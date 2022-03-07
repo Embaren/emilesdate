@@ -10,7 +10,7 @@ function readTextFile(file, callback) {
     rawFile.send(null);
 }
 
-function getContent(i_path, container){
+function getContent(i_path, container, callback){
     let contentPath = i_path+"/content.json";
     readTextFile(contentPath, function(text){
         let contentList = JSON.parse(text);
@@ -73,10 +73,15 @@ function getContent(i_path, container){
                     break;
             }
         }
+        typeof callback === 'function' && callback();
     });
 };
 
 let path = "/Content";
 let contentContainer = document.getElementById("content");
 
-getContent(path, contentContainer);
+getContent(path, contentContainer, () => {
+        url = document.URL
+        url.substring(url.indexOf('#')+1);
+        document.getElementById('id').scrollIntoView();
+});
