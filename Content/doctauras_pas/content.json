@@ -4,5 +4,11 @@
         "title": "Chapitre 1",
         "date": "Mercredi 23 février 2022",
         "id": "chapitre_1"
+    },
+    {
+        "contentType": "chapter",
+        "title": "Conclusion",
+        "date": "Lundi 7 mars 2022",
+        "id": "conclusion"
     }
 ]
