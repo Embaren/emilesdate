@@ -34,6 +34,7 @@ header{
   margin-left:-50px;
   padding-top: 90px;
   padding-bottom: 90px;
+  scroll-margin: 90px;
 }
 footer{
   background-color: white;

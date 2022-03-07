@@ -82,6 +82,6 @@ let contentContainer = document.getElementById("content");
 
 getContent(path, contentContainer, () => {
         url = document.URL
-        url.substring(url.indexOf('#')+1);
-        document.getElementById('id').scrollIntoView();
+        idToScroll = url.substring(url.indexOf('#')+1);
+        document.getElementById(idToScroll).scrollIntoView();
 });
