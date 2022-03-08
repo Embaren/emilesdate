@@ -89,6 +89,7 @@ function getContent(i_path, container){
                         }
                         let audioPath = i_path+"/"+id+".mp3";
                         let newAudio = document.createElement("audio");
+                        newAudio.controls = "controls";
                         newAudio.src = audioPath;
                         newMedia.appendChild(newAudio);
                         container.appendChild(newMedia);
