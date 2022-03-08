@@ -108,7 +108,7 @@ getContent(path, contentContainer);
 {  
 url = document.URL
 idToScroll = url.substring(url.indexOf('#')+1);
-if idToScroll && setTimeout(() => {
+idToScroll && setTimeout(() => {
         url = document.URL
         idToScroll = url.substring(url.indexOf('#')+1);
         document.getElementById(idToScroll).scrollIntoView();
