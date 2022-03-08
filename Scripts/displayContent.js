@@ -69,6 +69,39 @@ function getContent(i_path, container){
                         });
                     }
                     break;
+                case 'media_mp3':
+                    if ("id" in content){
+                        let id=content.id;
+                        let newMedia = document.createElement("div");
+                        newMedia.className = "article-media";
+                        newMedia.id=content.id;
+                        if("date" in content){
+                            let dateElement = document.createElement("p");
+                            dateElement.className = "article-date";
+                            dateElement.innerHTML = content.date;
+                            newMedia.appendChild(dateElement);
+                        }
+                        if("title" in content){
+                            let titleElement = document.createElement("h3");
+                            titleElement.className = "article-media-title";
+                            titleElement.innerHTML = content.title;
+                            newMedia.appendChild(titleElement);
+                        }
+                        let audioPath = i_path+"/"+id+".mp3";
+                        let newAudio = document.createElement("audio");
+                        newAudio.src = audioPath;
+                        newMedia.appendChild(newAudio);
+                        container.appendChild(newMedia);
+                    }
+                        
+                    
+                    
+                    <audio
+        controls
+        src="/media/cc0-audio/t-rex-roar.mp3">
+            Your browser does not support the
+            <code>audio</code> element.
+    </audio>
                 default:
                     break;
             }
