@@ -93,15 +93,6 @@ function getContent(i_path, container){
                         newMedia.appendChild(newAudio);
                         container.appendChild(newMedia);
                     }
-                        
-                    
-                    
-                    <audio
-        controls
-        src="/media/cc0-audio/t-rex-roar.mp3">
-            Your browser does not support the
-            <code>audio</code> element.
-    </audio>
                 default:
                     break;
             }
