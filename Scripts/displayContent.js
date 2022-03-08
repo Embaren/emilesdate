@@ -113,8 +113,13 @@ let path = "/Content";
 let contentContainer = document.getElementById("content");
 
 getContent(path, contentContainer);
-setTimeout(() => {
+
+{  
+url = document.URL
+idToScroll = url.substring(url.indexOf('#')+1);
+if idToScroll && setTimeout(() => {
         url = document.URL
         idToScroll = url.substring(url.indexOf('#')+1);
         document.getElementById(idToScroll).scrollIntoView();
 },500);
+}
